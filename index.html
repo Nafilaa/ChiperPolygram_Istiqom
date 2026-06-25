@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secure Message Encryption</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🔐 Secure Message Encryption</h1>
+    <p>Sistem Keamanan Pesan dengan Caesar Cipher</p>
+</div>
+
+<div class="banner">
+    <h3>🛡️ Data Security Communication System</h3>
+</div>
+
+<div class="container">
+
+    <!-- ENKRIPSI -->
+    <div class="card">
+
+        <h2>Encrypt Message</h2>
+
+        <label>Input Message</label>
+        <textarea
+            id="pesan"
+            placeholder="Masukkan pesan rahasia..."></textarea>
+
+        <label>Security Key</label>
+        <input
+            type="number"
+            id="kunci"
+            value="3">
+
+        <button onclick="encryptText()">
+            🔒 Encrypt Now
+        </button>
+
+        <label>Encrypted Text</label>
+        <textarea
+            id="cipher"
+            readonly></textarea>
+
+        <button onclick="copyCipher()">
+            📋 Copy Result
+        </button>
+
+        <div id="proses"></div>
+
+        <label>Destination WhatsApp</label>
+        <input
+            type="text"
+            id="nomor"
+            placeholder="628xxxxxxxxxx">
+
+        <button onclick="kirimWA()">
+            📤 Send to WhatsApp
+        </button>
+
+    </div>
+
+    <!-- DEKRIPSI -->
+    <div class="card">
+
+        <h2>Decrypt Message</h2>
+
+        <label>Encrypted Text</label>
+        <textarea
+            id="cipherMasuk"></textarea>
+
+        <button onclick="decryptText()">
+            🔓 Decrypt Now
+        </button>
+
+        <label>Original Message</label>
+        <textarea
+            id="plain"
+            readonly></textarea>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Secure Communication Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
